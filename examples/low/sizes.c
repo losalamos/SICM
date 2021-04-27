@@ -3,7 +3,7 @@
 
 #include "sizes.h"
 
-size_t *select_sizes(size_t count, size_t max_size) {
+size_t *select_sizes(size_t max_size, size_t count) {
     size_t *sizes = calloc(count, sizeof(size_t));
     for(size_t i = 0; i < count; i++) {
         while ((sizes[i] = (rand() * rand() * rand()) % max_size) == 0);
